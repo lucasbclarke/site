@@ -38,3 +38,5 @@ Overall sshGui has greatly improved my ability to connect to my local machines t
 the future.
 
 6.1.26 - 07:15 AM AEST
+
+EDIT: sshGui now allows for a variety of popular linux terminals listed on the github page, while also supporting powershell and command prompt terminals.
