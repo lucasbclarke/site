@@ -1,58 +1,98 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
-    <div style="background-color: #0042a4; color: #FFFFFF; margin-top: 0px;">
-    <h1 id=name>Lucas Clarke</h1>
-    <h2 id=occupation>High School Student - Sydney, Australia</h2>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Self-hosted Pi-hole Server - Lucas Clarke</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    .hero-bg {
+      background: linear-gradient(135deg, #0f172a, #1e2937);
+    }
+  </style>
+</head>
+
+<body class="bg-slate-950 text-slate-200">
+  <nav class="py-4 px-6 flex items-center justify-between border-b border-slate-800">
+    <a href="../index1.html" class="text-xl font-bold hover:text-emerald-400 transition-colors">Lucas Clarke</a>
+    <a href="../index1.html" class="text-sm text-zinc-400 hover:text-white transition-colors"><i class="fas fa-arrow-left mr-2"></i>Back to Home</a>
+  </nav>
+
+  <header class="hero-bg py-16 text-center">
+    <h1 class="text-4xl font-bold mb-4">Self-hosted Pi-hole Server</h1>
+    <div class="flex items-center justify-center gap-3 text-sm text-emerald-400">
+      <span class="uppercase tracking-widest">Linux</span>
+      <span class="text-slate-500">•</span>
+      <span>Dec 2025</span>
     </div>
-  </head>
+  </header>
 
-  <body>
-    <h2 id=subheading-1>Pihole Server</h2>
+  <article class="max-w-3xl mx-auto px-6 py-12">
+    <div class="space-y-6 text-lg text-slate-300 leading-relaxed">
+      <p>
+        I had an old Dell laptop which was distributed with Windows 7, sitting unused in a cupboard for a number of months.
+        I occasionally pulled it out to install and test a linux distribution that I had discovered but I didn't have any consistent use for the machine.
+      </p>
+      <p>
+        I had heard of Pi-hole a number of months earlier, and mostly forgot about it until I saw online used in a home-lab setup.
+      </p>
+      <p>
+        Firstly, I installed Ubuntu 24.04.3 LTS as the base operating system, that Pi-hole would run off of.
+        Next I went to the Pi-hole website and ran the curl command to pull down and run the install script.
+      </p>
+      <p>
+        As the install script ran I was presented with a number of options in the TUI interface in regards to DNS and security.
+        I decided to stay with the defaults as I did not have any reason to change them.
+        However while in the TUI setup I realised that I had not yet created a static IP address for this machine, which was required for Pi-hole to work correctly.
+      </p>
+      <p>
+        Consequently, I exited the setup and went into my router settings, where I set a static IP address for the dell laptop.
+        Going back to the machine, I was now able to verify that the machine had received its static address and so I restarted the Pi-hole setup again.
+      </p>
+      <p>
+        After finishing the setup I navigated to the Pi-hole web interface using the static IP I had just set, with the suffix /admin.
+        On the web interface I was able to view all clients connected to the network and monitor which requests were denied and what addresses they corresponded to.
+      </p>
+      <p>
+        This setup worked well for the first few weeks, however I had been noticing that not all advertisements had been blocked.
+        I knew that Pi-hole worked on a website-list system and that there was other lists that could potentially produce greater results.
+      </p>
+      <p>
+        Subsequently I searched and found two more lists that claimed they worked well for moderate ad-blocking cases.
+        I then was able to simply copy the links to these lists, into the settings of the Pi-hole web interface and restart the Pi-hole service.
+      </p>
+      <p>
+        After adding the extra lists the Pi-hole server was running well, up until a few days ago where I had started to notice an increase in the amount of advertisements that were shown.
+        As I had not been actively monitoring the web interface, I decided that would be the first place to check.
+      </p>
+      <p>
+        However when I attempted to navigate to the web interface I was met with a page not found error message.
+        As I was sure that the address was correct I decided to open the machine itself to see if there was an error that had been reported.
+      </p>
+      <p>
+        It turned out that there was a connection error which required the Pi-hole service to be restarted and updated, and after doing so worked correctly as it had before.
+      </p>
+      <p>
+        Originally when starting this project I was concerned that all of the traffic on my network would be slowed down.
+        It turned out however that this was not the case, and I have seen no noticeable drop in network performance, from any device connected to the network.
+        And despite the machine being at least 16 years old, it has been able to keep up with the traffic of my home network.
+      </p>
+    </div>
 
-<h3 id=blog-text><span>I had an old Dell laptop which was distributed with Windows 7, sitting unused in a cupboard for a number of months.
-    I occasionally pulled it out to install and test a linux distribution that I had discovered but I didn't have any consistent use for the machine.</h3>
+    <div class="mt-10">
+      <img src="dell-laptop.jpg" alt="Dell Laptop running Pi-hole" class="w-full max-w-xl mx-auto rounded-xl border border-slate-700">
+    </div>
+  </article>
 
-<h3 id=blog-text>I had heard of Pi-hole a number of months earlier, and mostly forgot about it until I saw online used in a home-lab setup.</h3>
-
-<h3 id=blog-text>Firstly, I installed Ubuntu 24.04.3 LTS as the base operating system, that Pi-hole would run off of.
-  Next I went to the Pi-hole website and ran the curl command to pull down and run the install script.</h3>
-<h3 id=blog-text>As the install script ran I was presented with a number of options in the TUI interface in regards to DNS and security.
-  I decided to stay with the defaults as I did not have any reason to change them.
-  However while in the TUI setup I realised that I had not yet created a static IP address for this machine, which was required for Pi-hole to work correctly.</h3>
-
-<h3 id=blog-text>Consequently, I exited the setup and went into my router settings, where I set a static IP address for the dell laptop.
-  Going back to the machine, I was now able to verify that the machine had recieved its static address and so I restarted the Pi-hole setup again.</h3>
-
-<h3 id=blog-text>After finishing the setup I navigated to the Pi-hole web interface using the static IP I had just set, with the suffix /admin.
-  On the web interface I was able to view all clients connected to the network and monitor which requests were denied and what addresses they corresponded too.</h3>
-
-<h3 id=blog-text>This setup worked well for the first few weeks, however I had been noticing that not all advertisments had been blocked.
-  I knew that Pi-hole worked on a website-list system and that there was other lists that could potentially produce greater results.</h3>
-
-<h3 id=blog-text>Subsequently I searched and found two more lists that claimed they worked well for moderate add-blocking cases.
-  I then was able to simply copy the links to these lists, into the settings of the Pi-hole web interface and restart the Pi-hole service.</h3>
-
-<h3 id=blog-text>After adding the extra lists the Pi-hole server was running well, up until a few days ago where I had started to notice an increase in the amount of advertisments that were shown.
-  As I had not been actively monitoring the web interface, I decided that would be the first place to check.</h3>
-
-<h3 id=blog-text>Howver when I attempted to navigate to the web interface I was met with a page not found error message.
-  As I was sure that the address was correct I decided to open the machine itself to see if there was an error that had been reported.</h3>
-
-<h3 id=blog-text>It turned out that there was a connection error which required the Pi-hole service to be restarted and updated, and after doing so worked correctly as it had before.</h3>
-
-<h3 id=blog-text>Originally when starting this project I was concerned that all of the traffic on my network would be slowed down.
-  It turned out however that this was not the case, and I have seen no noticeable drop in network performance, from any device connected to the network.
-  And despite the machine being at least 16 years old, it has been able to keep up with the traffic of my home network.</h3>
-
-<h3 id=blog-text>14.12.25 - 09:00 AM AEST</span></h3>
-
-<img src="dell-laptop.jpg" id=dell-laptop>
-
-<a href="../index.html" id=subheading-2>Homepage</a>
-  </body>
+  <footer class="py-12 text-center border-t border-slate-800">
+    <p>&copy; Lucas Clarke • Hosted on GitHub Pages</p>
+  </footer>
+</body>
 
 </html>

@@ -1,65 +1,107 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
-    <div style="background-color: #0042a4; color: #FFFFFF; margin-top: 0px;">
-    <h1 id=name>Lucas Clarke</h1>
-    <h2 id=occupation>High School Student - Sydney, Australia</h2>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSHGui Application - Lucas Clarke</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    .hero-bg {
+      background: linear-gradient(135deg, #0f172a, #1e2937);
+    }
+  </style>
+</head>
+
+<body class="bg-slate-950 text-slate-200">
+  <nav class="py-4 px-6 flex items-center justify-between border-b border-slate-800">
+    <a href="../index1.html" class="text-xl font-bold hover:text-emerald-400 transition-colors">Lucas Clarke</a>
+    <a href="../index1.html" class="text-sm text-zinc-400 hover:text-white transition-colors"><i class="fas fa-arrow-left mr-2"></i>Back to Home</a>
+  </nav>
+
+  <header class="hero-bg py-16 text-center">
+    <h1 class="text-4xl font-bold mb-4">SSHGui Application</h1>
+    <div class="flex items-center justify-center gap-3 text-sm text-emerald-400">
+      <span class="uppercase tracking-widest">Development</span>
+      <span class="text-slate-500">•</span>
+      <span>Jan 2026</span>
     </div>
-  </head>
+  </header>
 
-  <body>
-    <h2 id=subheading-1>SSHGui Application</h2>
+  <article class="max-w-3xl mx-auto px-6 py-12">
+    <div class="space-y-6 text-lg text-slate-300 leading-relaxed">
+      <p>
+        In my previous posts I have outlined two examples of servers that I have set up on my home network.
+        However, connecting to them, and to any other machine would require typing out the full ssh command in my terminal.
+      </p>
+      <p>
+        I decided to attempt to implement an alternative by creating an app that would display a list of all of my servers, and allow me to select which one to connect to, then open my terminal of choice connected to my remote server.
+      </p>
+      <p>
+        Prior to SSHGui, I have used Zig for nearly all of my projects, but I decided I would try something new.
+        I had heard and seen the extent to which Java is used in enterprise software, along with its mature ecosystem and broad userbase.
+      </p>
+      <p>
+        Despite the negative connotations regarding the language I chose it as the language for this application.
+        Using Java was much simpler than using Zig, as searching online for solutions to problems yielded results with much greater consistency and accuracy.
+        Along with this Java allows for functions to hang off variables which makes using the language much more fluent than in Zig where this is not the case.
+      </p>
+      <p>
+        My first attempt at writing a real program in Java, was a basic program to just launch an application window.
+        Like most things throughout the SSHGui project, finding an answer to how I would go about this was not a difficult task.
+      </p>
+      <p>
+        I had discovered the awt library to open and control application windows using text, lists, and options, and in no time I had a "Hello World" window open, along with lists and options which functioned as expected.
+      </p>
+      <p>
+        After configuring the sizing of the window and list, and the position of the list I was ready to start working out how I would make this application function.
+        I had discovered that using a KeyListener, I could define logic to be executed when the user pressed the specified key within the component the listener was listening to.
+        I used the KeyListener to detect the Enter, Control+n, and Control+p keybindings, for selection, moving down the list and moving up the list respectively (the list had native support
+        for arrow key navigation).
+      </p>
+      <p>
+        Despite my progress up to this point I was still missing the fundamental aspect that would make this application work, the connection to the servers themselves.
+        Thankfully again I needn't look far before I found the answer I was looking for, the Runtime.getRuntime().exec() function.
+      </p>
+      <p>
+        This function would allow me to run any terminal command as another process on my machine, and using the -e argument when launching my terminal, I was able to open a SSH connection directly through the list when an option was selected.
+      </p>
+      <p>
+        Now the program functioned how I had hoped but I knew there was still improvements to be made.
+        At the moment I was manually specifying the amount of servers, the server addresses, the names of each server and the terminal that would be used to launch the SSH connection.
+      </p>
+      <p>
+        With the help of Opencode to point out flaws in my implementation, I was able to construct two functions to read a config file that would specify what previously had to be hard-coded and then pass those outputs to the Runtime.getRuntime().exec() function directly.
+        This allows for any terminal (that allows for the -e flag to run a command as the terminal opens - sorry Powershell users) and any number of servers to be specified.
+      </p>
+      <p>
+        SSHGui now worked fully as intended, aside from one part of the project, the runner script.
+        I had been using this basic shell script to make running the program easier and more accessible on other linux systems.
+      </p>
+      <p>
+        As I was using the Sway window manager, I also used the "dotool" application to make the SSHGui window into floating mode as soon as it opened within the runner script, it also defines necessary environment variables for systems such as debian which require them to open awt applications.
+      </p>
+      <p>
+        Overall SSHGui has greatly improved my ability to connect to my local machines to manage and configure them as need be and I hope that it will continue to for myself and others into the future.
+      </p>
+      <p class="text-sm text-slate-400 italic">
+        Edit: sshGui now allows for a variety of popular linux terminals listed on the github page, while also supporting powershell and command prompt terminals.
+      </p>
+    </div>
 
-<h3 id=blog-text><span>In my previous posts I have outlined two examples of servers that I have set up on my home network.
-    However, connecting to them, and to any other machine would require typing out the full ssh command in my terminal.</h3>
+    <div class="mt-10">
+      <img src="SSHGui.png" alt="SSHGui Application" class="w-full max-w-2xl mx-auto rounded-xl border border-slate-700">
+    </div>
+  </article>
 
-<h3 id=blog-text>I decided to attempt to implement an alternative by creating an app that would display a list of all of my servers, and allow me to select which one to connect to, then open my terminal of choice connected to my remote server.</h3>
-
-<h3 id=blog-text>Prior to SSHGui, I have used Zig for nearly all of my projects, but I decided I would try something new.
-  I had heard and seen the extent to which Java is used in enterprise software, along with its mature ecosystem and broad userbase.</h3>
-
-<h3 id=blog-text>Despite the negative connotations regarding the language I chose it as the language for this application.
-  Using Java was much simpler than using Zig, as searching online for solutions to problems yeilded results with much greater consistency and accuracy.
-  Along with this Java allows for functions to hang off variables which makes using the language much more fluent than in Zig where this is not the case.</h3>
-
-<h3 id=blog-text>My first attempt at writing a real program in Java, was a basic program to just launch an application window.
-  Like most things throughout the SSHGui project, finding an answer to how I would go about this was not a difficult task.</h3>
-
-<h3 id=blog-text>I had discovered the awt library to open and control application windows using text, lists, and options, and in no time I had a "Hello World" window open, along with lists and options which functioned as expected.</h3>
-
-<h3 id=blog-text>After configuring the sizing of the window and list, and the position of the list I was ready to start working out how I would make this application function.
-I had discovered that using a KeyListener, I could define logic to be executed when the user pressed the specified key within the component the listener was listening too.
-I used the KeyListener to detct the Enter, Control+n, and Control+p keybindings, for selection, moving down the list and moving up the list respectively (the list had native support
-for arrow key navigation).</h3>
-
-<h3 id=blog-text>Despite my progress up to this point I was still missing the fundamental aspect that would make this application work, the connection to the servers themselves.
-  Thankfully again I needn't look far before I found the answer I was looking for, the Runtime.getRuntime().exec() function.</h3>
-
-<h3 id=blog-text>This function would allow me to run any terminal command as another process on my machine, and using the -e argument when launching my terminal, I was able to open a SSH connection directly through the list when an option was selected.</h3>
-
-<h3 id=blog-text>Now the program functioned how I had hoped but I knew there was still improvements to be made.
-  At the moment I was manually specifing the amount of servers, the server addresses, the names of each server and the terminal that would be used to launch the SSH connection.</h3>
-
-<h3 id=blog-text>With the help of Opencode to point out flaws in my implementation, I was able to construct two functions to read a config file that would specify what previously had to be hard-coded and then pass those outputs to the Runtime.getRuntime().exec() function directly.
-  This allows for any terminal (that allows for the -e flag to run a command as the terminal opens - sorry Powershell users) and any number of servers to be specified.</h3>
-
-<h3 id=blog-text>SSHGui now worked fully as intended, aside from one part of the project, the runner script.
-  I had been using this basic shell script to make running the program easier and more accessible on other linux systems.</h3>
-
-<h3 id=blog-text>As I was using the Sway window manager, I also used the "dotool" application to make the SSHGui window into floating mode as soon as it opened within the runner script, it also defines necessary environment variables for systems such as debain which require them to open awt applications.</h3>
-
-<h3 id=blog-text>Overall SSHGui has greatly improved my ability to connect to my local machines to managage and configure them as need be and I hope that it will continue to for myself and others into the future.</h3>
-
-<h3 id=blog-text>6.1.26 - 07:15 AM AEST</h3>
-
-<h3 id=blog-text>EDIT: sshGui now allows for a variety of popular linux terminals listed on the github page, while also supporting powershell and command prompt terminals.</span></h3>
-
-<img src="SSHGui.png" id=sshGui>
-
-<a href="../index.html" id=subheading-2>Homepage</a>
-  </body>
+  <footer class="py-12 text-center border-t border-slate-800">
+    <p>&copy; Lucas Clarke • Hosted on GitHub Pages</p>
+  </footer>
+</body>
 
 </html>

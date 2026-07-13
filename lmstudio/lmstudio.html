@@ -1,42 +1,73 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
-    <div style="background-color: #0042a4; color: #FFFFFF; margin-top: 0px;">
-    <h1 id=name>Lucas Clarke</h1>
-    <h2 id=occupation>High School Student - Sydney, Australia</h2>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LM Studio - Lucas Clarke</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    .hero-bg {
+      background: linear-gradient(135deg, #0f172a, #1e2937);
+    }
+  </style>
+</head>
+
+<body class="bg-slate-950 text-slate-200">
+  <nav class="py-4 px-6 flex items-center justify-between border-b border-slate-800">
+    <a href="../index1.html" class="text-xl font-bold hover:text-emerald-400 transition-colors">Lucas Clarke</a>
+    <a href="../index1.html" class="text-sm text-zinc-400 hover:text-white transition-colors"><i class="fas fa-arrow-left mr-2"></i>Back to Home</a>
+  </nav>
+
+  <header class="hero-bg py-16 text-center">
+    <h1 class="text-4xl font-bold mb-4">LM Studio</h1>
+    <div class="flex items-center justify-center gap-3 text-sm text-emerald-400">
+      <span class="uppercase tracking-widest">AI / ML</span>
+      <span class="text-slate-500">•</span>
+      <span>Apr 2026</span>
     </div>
-  </head>
+  </header>
 
-  <body>
-    <h2 id=subheading-1>Lm Studio</h2>
+  <article class="max-w-3xl mx-auto px-6 py-12">
+    <div class="space-y-6 text-lg text-slate-300 leading-relaxed">
+      <p>
+        LM Studio is a free and open-source application to run locally downloaded large language models. It runs on Windows, Mac and Linux machines, and also comes with a cli tool to run
+        models in a headless environment.
+      </p>
+      <p>
+        I have installed LM Studio on a machine with 16gb of ddr4 memory and a GTX 980ti graphics card. Despite this hardware being relatively old and rather inadequate to handle most AI
+        models well, I was able to come across a model that did run smoothly and still have enough parameters to complete most tasks well.
+      </p>
+      <p>
+        That model turned out to be Gemma 4 with 4B parameters, which also came with Vision, Tool use and reasoning capabilities. This model was able to fit primarily on the VRAM of my GPU
+        6GB, while only using a portion of my system memory.
+      </p>
+      <p>
+        However, by default I did not have any way to directly access web information that was not already in the parameters of the model. Luckily LM Studio allows for additional support to be
+        added through their plugins system. I found the duckduckgo and visit-website plugins from danielsig, and installed them using the "lms get danielsig/duckduckgo" and "lms get
+        danielsig/visit-website" commands respectively.
+      </p>
+      <p>
+        However I wanted to be able to access this model on other devices (primarily my laptop), but luckily there was already an inbuilt way to do that. LM Link allows for two instances of
+        LM Studio to be connected together (provided they are both signed into the same account), on the same local network. Now I am able to access all the capabilities of the AI model running
+        on my PC while having the flexibility to get its output anywhere throughout my house. Furthermore I am also able to connect remotely to my AI model from anywhere, as both my laptop and
+        PC are connected to Tailscale.
+      </p>
+      <p>
+        I have found great use out of LM Studio and will continue to use it as more models come out, that are hopefully even more efficient, and the hardware I am able to run them on also
+        improves.
+      </p>
+    </div>
+  </article>
 
-<h3 id=blog-text><span>Lm Studio is a free and open-source application to run locallly downloaded large language models. It runs on Windows, Mac and Linux machines, and also comes with a cli tool to run
-models in a headless environment.</h3>
-
-<h3 id=blog-text>I have installed Lm Studio on a machine with 16gb of ddr4 memory and a GTX 980ti graphics card. Despite this hardware being relatively old and rather inadequate to handle most AI
-models well, I was able to come accross a model that did run smoothly and still have enough parameters to complete most tasks well.</h3>
-
-<h3 id=blog-text>That model turned out to be Gemma 4 with 4B parameters, which also came with Vision, Tool use and reasoning capabilities. This model was able to fit primarily on the VRAM of my GPU
-6GB, while only using a portion of my system memory.</h3>
-
-<h3 id=blog-text>However, by default I did not have any way to directly access web information that was not already in the parameters of the model. Luckily Lm studio allows for additional support to be
-added through their plugins system. I found the duckduckgo and visit-website plugins from danielsig, and installed them using the &ldquo;lms get danielsig/duckduckgo&rdquo; and &ldquo;lms get
-danielsig/visit-website&rdquo; commands respectively.</h3>
-
-<h3 id=blog-text>However I wanted to be able to access this model on other devices (primarily my laptop), but luckily there was already an inbuilt way to do that. Lm link allows for two instances of
-Lm studio to be connected together (provided they are both signed into the same account), on the same local network. Now I am able to access all the capabilities of the AI model running
-on my PC while having the flexibility to get it&rsquo;s output anywhere throughout my house. Furthermore I am also able to connect remotely to my AI model from anywhere, as both my laptop and
-PC are connected to Tailscale.</h3>
-
-<h3 id=blog-text>I have found great use out of Lm Studio and will continue to use it as more models come out, that are hopefully even more effecient, and the hardware I am able to run them on also
-improves.</h3>
-
-<h3 id=blog-text>13.4.26 - 04:30 PM AEST</span></h3>
-
-<a href="../index.html" id=subheading-2>Homepage</a>
-  </body>
+  <footer class="py-12 text-center border-t border-slate-800">
+    <p>&copy; Lucas Clarke • Hosted on GitHub Pages</p>
+  </footer>
+</body>
 
 </html>

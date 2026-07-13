@@ -1,52 +1,89 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
-    <div style="background-color: #0042a4; color: #FFFFFF; margin-top: 0px;">
-    <h1 id=name>Lucas Clarke</h1>
-    <h2 id=occupation>High School Student - Sydney, Australia</h2>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Self-hosted Minecraft Server - Lucas Clarke</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    .hero-bg {
+      background: linear-gradient(135deg, #0f172a, #1e2937);
+    }
+  </style>
+</head>
+
+<body class="bg-slate-950 text-slate-200">
+  <nav class="py-4 px-6 flex items-center justify-between border-b border-slate-800">
+    <a href="../index1.html" class="text-xl font-bold hover:text-emerald-400 transition-colors">Lucas Clarke</a>
+    <a href="../index1.html" class="text-sm text-zinc-400 hover:text-white transition-colors"><i class="fas fa-arrow-left mr-2"></i>Back to Home</a>
+  </nav>
+
+  <header class="hero-bg py-16 text-center">
+    <h1 class="text-4xl font-bold mb-4">Self-hosted Minecraft Server</h1>
+    <div class="flex items-center justify-center gap-3 text-sm text-emerald-400">
+      <span class="uppercase tracking-widest">Linux</span>
+      <span class="text-slate-500">•</span>
+      <span>Dec 2025</span>
     </div>
-  </head>
+  </header>
 
-  <body>
-    <h2 id=subheading-1>Minecraft Server</h2>
+  <article class="max-w-3xl mx-auto px-6 py-12">
+    <div class="space-y-6 text-lg text-slate-300 leading-relaxed">
+      <p>
+        I was able to bring home an old Dell Inspiron PC that had been used in my school's library, but now was of no use to the school.
+        I opened the PC and cleaned it out with a small hand-blower and a brush to remove the years of dust that had been collected.
+      </p>
+      <p>
+        I then re-pasted the CPU (an intel core 2 duo) and reseated the ram, however when attempting to power it on it would turn on with no display.
+        Despite purchasing a graphics card for the PC (a Nvidia GT210) all I needed to do was to just insert the ram correctly to get the correct display output.
+      </p>
+      <p>
+        The PC remained mostly unused until one-day when I was inspired by a video that I had seen where a Minecraft server was hosted entirely on personal hardware.
+        I installed Ubuntu server onto the PC and downloaded the server.jar from the minecraft website with the required Java packages to run the server application.
+      </p>
+      <p>
+        The first version that I ran was 1.8.9 as I was aware that my CPU was nearly 20 years old, and it did build and run with no issues.
+        I was able to connect both from my laptop and gaming PC.
+      </p>
+      <p>
+        Overall, the gameplay was smooth with only some challenges with loading in a large number of chunks.
+      </p>
+      <p>
+        At that point I was connecting to the server directly using the ip address of the machine that was running it.
+        However I wanted to be able to connect to the server if I was using a different network, whether I was at or away from home.
+      </p>
+      <p>
+        So I decided to forward the port that the server was running on through my router so that I could connect to it from any location.
+        It was easier than I thought, I just provided the local ip address that I was using to connect and specify the port that would be forwarded.
+      </p>
+      <p>
+        After a short period, I was able to hotspot my mobile data to my laptop and connect through my router's ip address and the same port to the minecraft server on my home network.
+        As I was in the same room as the server I didn't see any noticeable performance issues when connecting remotely and everything worked the same as it had on the local network.
+      </p>
+      <p>
+        Next, I wanted to attempt to run the latest version of minecraft (which at that time was 1.21.10), to see how it would perform.
+        I set it up the same way I had with 1.8.9 by downloading the server.jar file from the minecraft website and then running it on the pc using java -jar server.jar.
+      </p>
+      <p>
+        Performance was noticeably worse than 1.8.9 as there was much more to compute for the old hardware.
+        However, I was still able to connect through the local and remote networks and play as if it were any other server despite the limitations in performance.
+      </p>
+    </div>
 
-<h3 id=blog-text><span>I was able to bring home an old Dell Inspiron PC that had been used in my school&rsquo;s library, but now was of no use to the school.
-    I opened the PC and cleaned it out with a small hand-blower and a brush to remove the years of dust that had been collected.</h3>
+    <div class="mt-10">
+      <img src="dell-inspiron.jpg" alt="Dell Inspiron PC" class="w-full max-w-xl mx-auto rounded-xl border border-slate-700">
+    </div>
+  </article>
 
-<h3 id=blog-text> I then re-pasted the CPU (an intel core 2 duo) and reseated the ram, however when attempting to power it on it would turn on with no display.
-  Despite purchasing a graphics card for the PC (a Nvidia GT210) all I needed to do was to just insert the ram correctly to get the correct display output.</h3>
-
-<h3 id=blog-text>The PC remained mostly unused until one-day when I was inspired by a video that I had seen where a Minecraft server was hosted entirely on personal hardware.
-  I installed Ubuntu server onto the PC and downloaded the server.jar from the minecraft website with the requried Java packages to run the server application.</h3>
-
-<h3 id=blog-text>The first version that I ran was 1.8.9 as I was aware that my CPU was nearly 20 years old, and it did build and run with no issues.
-  I was able to connect both from my laptop and gaming PC.</h3>
-
-<h3 id=blog-text>Overall, the gameplay was smooth with only some challenges with loading in a large number of chunks.</h3>
-
-<h3 id=blog-text>At that point I was connecting to the server directly using the ip address of the machine that was running it.
-  However I wanted to be able to connect to the server if I was using a different network, whether I was at or away from home.</h3>
-
-<h3 id=blog-text>So I decided to forward the port that the server was running on through my router so that I could connect to it from any location.
-  It was easier than I thought, I just provided the local ip address that I was using to connect and specify the port that would be forwarded.</h3>
-
-<h3 id=blog-text>After a short period, I was able to hotspot my mobile data to my laptop and connect through my router's ip address and the same port to the minecraft server on my home network.
-  As I was in the same room as the server I didn't see any noticable performance issues when connecting remotely and everything worked the same as it had on the local network.</h3>
-
-<h3 id=blog-text>Next, I wanted to attempt to run the latest version of minecraft (which at that time was 1.21.10), to see how it would perform.
-  I set it up the same way I had with 1.8.9 by downloading the server.jar file from the minecraft website and then running it on the pc using java -jar server.jar.</h3>
-
-<h3 id=blog-text>Performance was noticably worse than 1.8.9 as there was much more to compute for the old hardware.
-  However, I was still able to connect through the local and remote networks and play as if it were any other server despite the limitations in performance.</h3>
-
-<h3 id=blog-text>14.12.25 - 08:42 AM AEST</span></h3>
-
-<img src="dell-inspiron.jpg" id=dell-inspiron>
-
-<a href="../index.html" id=subheading-2>Homepage</a>
-  </body>
+  <footer class="py-12 text-center border-t border-slate-800">
+    <p>&copy; Lucas Clarke • Hosted on GitHub Pages</p>
+  </footer>
+</body>
 
 </html>

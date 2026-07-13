@@ -1,108 +1,327 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Lucas Clarke - Personal Website</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucas Clarke</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Custom tweaks */
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+    }
 
-  <body>
-    <div style="background-color: #0042a4; color: #FFFFFF; margin-top: 0px;">
-      <h1 id=name>Lucas Clarke</h1>
-       <h2 id=occupation>High School Student - Sydney, Australia</h2>
-    </div>
-
-    <p id=personal-description>
-    I enjoy spending my time working through various projects, both in hardware and software particularly those which are Linux based.<br>
-    I am also greatly interested in older generation hardware, especially in the improvements and increased functionality that can be had through the installation of Linux operating systems.<br>
-    Application development and Input/Output are areas in software in which I have background in and my Advent of Code, sshGui and javapass projects are an examples of these.</p><br>
-
-    <div id=contact-links>
-      <a href="https://github.com/lucasbclarke">Github- lucasbclarke</a>
-      <a href="mailto:lucasbaileyclarke@outlook.com">Email</a>
-    </div>
-
-    <details>
-      <summary id=subheading-1>Projects</summary>
-  
-    <h3 id=subheading-2>
-      Advent of code 2023 and 2024 <a href="https://github.com/lucasbclarke/aoc">lucasbclarke/aoc</a><br>
-      <p style="font-size: 19px; text-decoration: revert; display: inline-block; text-align: justify;">
-      Day 1 and 2 of <a href="https://adventofcode.com/2023">Advent of Code 2023</a> and Day 1 of <a href="https://adventofcode.com/2023">Advent of Code 2024</a> completed in <a href="https://ziglang.org">zig</a>.
-      </p>
-    </h3>
+    .hero-bg {
+      background: linear-gradient(135deg, #0f172a, #1e2937);
+    }
     
-    <hr id=paragraph-break>
+    .accent {
+      color: #10b981;
+    }
 
-    <h3 id=subheading-2>
-      <a href="https://nixos.org/">Nixos</a> and <a href="https://nixos.wiki/wiki/Home_Manager">Home-manager</a> configuration <a href="https://github.com/lucasbclarke/nix-conf">lucasbclarke/nix-conf</a><br>
-      <p style="font-size: 19px; text-decoration: revert; display: inline-block; text-align: justify;">
-          Multiple nixos system configurations using flakes and user configuration managed through home-manager for programs such as Neovim, Zsh, Tmux, Sway and Ghostty.
-      </p>
-    </h3>
+    .accent-hover:hover {
+      color: #10b981;
+    }
+  </style>
+</head>
 
-    <hr id=paragraph-break>
+<body class="bg-slate-950 text-slate-200">
+  <!-- Hero -->
+  <header class="hero-bg py-24 text-center">
+    <h1 class="text-6xl font-bold mb-4">Lucas Clarke</h1>
+    <p class="text-2xl text-zinc-400">High School Student • Linux Enthusiast • Developer</p>
+    <p class="max-w-2xl mx-auto mt-6 text-lg text-zinc-300">
+      Building software projects on Linux systems
+    </p>
+    <div class="mt-8 flex justify-center gap-4">
+      <a href="#projects" class="bg-emerald-600 hover:bg-emerald-700 px-8 py-3 rounded-full font-medium">View Projects</a>
+      <a href="https://github.com/lucasbclarke" target="_blank"
+        class="border border-zinc-400 hover:border-white px-8 py-3 rounded-full">GitHub</a>
+    </div>
+  </header>
 
-    <h3 id=subheading-2>
-      Personal Website <a href="https://github.com/lucasbclarke/personal-website">lucasbclarke/personal-website</a><br>
-      <p style="font-size: 19px; text-decoration: revert; display: inline-block; text-align: justify;">
-        The source code for this site on Github and where it is deployed using Github Pages.
-      </p>
-    </h3>
+  <!-- Skills / Tech Stack -->
+  <section class="py-16 bg-slate-900">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-semibold mb-8 text-center">Technical Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div class="bg-slate-800 hover:bg-slate-700 p-6 rounded-xl transition-colors">Zig</div>
+        <div class="bg-slate-800 hover:bg-slate-700 p-6 rounded-xl transition-colors">NixOS / Home-manager</div>
+        <div class="bg-slate-800 hover:bg-slate-700 p-6 rounded-xl transition-colors">Python</div>
+        <div class="bg-slate-800 hover:bg-slate-700 p-6 rounded-xl transition-colors">Neovim</div>
+      </div>
+    </div>
+  </section>
 
-    <hr id=paragraph-break>
+  <!-- Projects -->
+  <section id="projects" class="py-16">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-semibold mb-12 text-center">Featured Projects</h2>
+      <div class="grid md:grid-cols-2 gap-8">
 
-    <h3 id=subheading-2>
-      Legacy Neovim configuration <a href="https://github.com/lucasbclarke/nvim">lucasbclarke/nvim</a>
-      <p style="font-size: 19px; text-decoration: revert; display: inline-block; text-align: justify;">
-      My previous neovim configuration which was adapted from the <a href="https://github.com/nvim-lua/kickstart.nvim">kickstart.nvim</a> project,
-      using the <a href="https://github.com/folke/lazy.nvim">lazy.nvim</a> plugin manager. My configuration of Neovim has now moved to <a href="https://github.com/lucasbclarke/nix-conf">lucasbclarke/nix-conf</a> and is integrated with home-manager through nixvim.
-      </p>
-    </h3>
+        <!-- Project Card Example -->
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl overflow-hidden hover:border-emerald-500 hover:-translate-y-1 transition-all duration-300">
+          <div class="p-8">
+            <h3 class="text-2xl font-medium mb-3">NixOS Configuration</h3>
+            <p class="text-zinc-400 mb-6">Multiple nixos system configurations using flakes and user configuration
+              managed through home-manager for programs such as Neovim, Zsh, Tmux, Sway and Ghostty.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded">Nix</span>
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded">Lua</span>
+            </div>
+            <a href="https://github.com/lucasbclarke/nix-conf"
+              class="text-emerald-400 hover:text-emerald-300 hover:underline flex items-center gap-2">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
 
-    <hr id=paragraph-break>
+        <!-- Repeat cards for other projects: Advent of Code, SSHGui, Javapass, Snack Stat Tracker, etc. -->
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl overflow-hidden hover:border-emerald-500 hover:-translate-y-1 transition-all duration-300">
+          <div class="p-8">
+            <h3 class="text-2xl font-medium mb-3">Advent of code 2023 and 2024</h3>
+            <p class="text-zinc-400 mb-6">Day 1 and 2 of Advent of Code 2023 and Day 1 of Advent of Code 2024 completed
+              in zig.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded">Zig</span>
+            </div>
+            <a href="https://github.com/lucasbclarke/aoc" class="text-emerald-400 hover:text-emerald-300 hover:underline flex items-center gap-2">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
 
-    <h3 id=subheading-2>
-      SSHGui <a href="https://github.com/lucasbclarke/sshGui">lucasbclarke/sshGui</a>
-      <p style="font-size: 19px; text-decoration: revert; display: inline-block; text-align: justify;">
-          A simple GUI application written in Java to manage local server connections which can be configured using the config file.
-      </p>
-    </h3>
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl overflow-hidden hover:border-emerald-500 hover:-translate-y-1 transition-all duration-300">
+          <div class="p-8">
+            <h3 class="text-2xl font-medium mb-3">Personal Website</h3>
+            <p class="text-zinc-400 mb-6">The source code for this site on Github and where it is deployed using Github
+              Pages.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded">HTML</span>
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded">CSS</span>
+            </div>
+            <a href="https://github.com/lucasbclarke/site"
+              class="text-emerald-400 hover:text-emerald-300 hover:underline flex items-center gap-2">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
 
-    <hr id=paragraph-break>
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl overflow-hidden hover:border-emerald-500 hover:-translate-y-1 transition-all duration-300">
+          <div class="p-8">
+            <h3 class="text-2xl font-medium mb-3">Legacy Neovim configuration</h3>
+            <p class="text-zinc-400 mb-6">My previous neovim configuration which was adapted from the 
+            <a href="https://github.com/nvim-lua/kickstart.nvim" class="text-emerald-400 hover:text-emerald-300 hover:underline">kickstart.nvim</a>
+            project, using the <a href="https://github.com/folke/lazy.nvim" class="text-emerald-400 hover:text-emerald-300 hover:underline">lazy.nvim</a>
+            plugin manager. My configuration of Neovim has now moved to <a href="https://github.com/lucasbclarke/nix-conf" class="text-emerald-400 hover:text-emerald-300 hover:underline">lucasbclarke/nix-conf</a>
+            and is integrated with home-manager through nixvim.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded">Lua</span>
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded">Neovim</span>
+            </div>
+            <a href="https://github.com/lucasbclarke/nvim"
+               class="text-emerald-400 hover:text-emerald-300 hover:underline flex items-center gap-2">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
 
-    <h3 id=subheading-2>
-      javapass <a href="https://github.com/lucasbclarke/javapass">lucasbclarke/javapass</a>
-      <p style="font-size: 19px; text-decoration: revert; display: inline-block; text-align: justify;">
-      A simple tool written in java to create and manage passwords for user accounts. The management relies on <a href="https://github.com/getsops/sops">sops</a> to retrieve saved
-      passwords in a given secrets.yaml file for a specified service.
-      </p>
-    </h3>
-
-  <hr id=paragraph-break>
-
-    <h3 id=subheading-2>
-      Snack Stat Tracker <a href="https://github.com/lucasbclarke/snack-stat-tracker">lucasbclarke/snack-stat-tracker</a>
-      <p style="font-size: 19px; text-decoration: revert; display: inline-block; text-align: justify;">
-      Snack Stat Tracker (SST) is a basic inventory management software for school canteen items.
-      The application is fast and reliable, and the items, prices and stocks can all be modified through the configuration file interface.
-      </p>
-    </h3>
-
-  </details>
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl overflow-hidden hover:border-emerald-500 hover:-translate-y-1 transition-all duration-300">
+          <div class="p-8">
+            <h3 class="text-2xl font-medium mb-3">SSHGui</h3>
+            <p class="text-zinc-400 mb-6">A simple GUI application written in Java to manage local server connections
+              which can be configured using the config file.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded">Java</span>
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded">Abstract Window Toolkit (AWT)</span>
+            </div>
+            <a href="https://github.com/lucasbclarke/sshGui"
+              class="text-emerald-400 hover:text-emerald-300 hover:underline flex items-center gap-2">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
 
 
-  <details>
-      <summary id=subheading-1>Articles</summary>
-    <a href="minecraft-server/minecraft-server.html" id=subheading-2>Self-hosted Minecraft Server</a><br>
-    <a href="pihole-server/pihole-server.html" id=subheading-2>Self-hosted PiHole Server</a><br>
-    <a href="SSHGui/SSHGui.html" id=subheading-2>SSHGui Application</a><br>
-    <a href="javapass/javapass.html" id=subheading-2>Javapass Application</a><br>
-    <a href="harvardGraphics/harvardGraphics.html" id=subheading-2>Harvard Graphics</a><br>
-    <a href="tailscale/tailscale.html" id=subheading-2>Tailscale</a><br>
-    <a href="lmstudio/lmstudio.html" id=subheading-2>LM Studio</a>
-    </details>
-  </body>
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl overflow-hidden hover:border-emerald-500 hover:-translate-y-1 transition-all duration-300">
+          <div class="p-8">
+            <h3 class="text-2xl font-medium mb-3">Javapass</h3>
+            <p class="text-zinc-400 mb-6">A simple tool written in java to create and manage passwords for user
+              accounts. The management relies on sops to retrieve saved passwords in a given secrets.yaml file for a
+              specified service.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded">Java</span>
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded">SOPS</span>
+            </div>
+            <a href="https://github.com/lucasbclarke/javapass"
+              class="text-emerald-400 hover:text-emerald-300 hover:underline flex items-center gap-2">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl overflow-hidden hover:border-emerald-500 hover:-translate-y-1 transition-all duration-300">
+          <div class="p-8">
+            <h3 class="text-2xl font-medium mb-3">Snack Stat Tracker</h3>
+            <p class="text-zinc-400 mb-6">Snack Stat Tracker (SST) is a prototype tool for a basic inventory management
+              software for school canteen items. The application is fast and reliable, and the items, prices, and stocks
+              can all be modified through the configuration file interface.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded">Python</span>
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded">Tkinter</span>
+            </div>
+            <a href="https://github.com/lucasbclarke/snack-stat-tracker"
+              class="text-emerald-400 hover:text-emerald-300 hover:underline flex items-center gap-2">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  
+  <!-- Articles -->
+  <section id="articles" class="py-16 bg-slate-900">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-semibold mb-12 text-center">Articles</h2>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl overflow-hidden hover:border-emerald-500 hover:-translate-y-1 transition-all duration-300">
+          <div class="p-8">
+            <div class="flex items-center gap-3 text-xs text-emerald-400 mb-4">
+              <span class="uppercase tracking-widest">Linux</span>
+              <span class="text-slate-500">•</span>
+              <span>Dec 2025</span>
+            </div>
+            <h3 class="text-2xl font-medium mb-3">Self-hosted Minecraft Server</h3>
+            <p class="text-slate-400 mb-6 line-clamp-3">
+              Setting up a self-hosted Minecraft server on a Dell Inspiron, with port forwarding for remote access across multiple Minecraft versions.
+            </p>
+            <a href="minecraft-server/minecraft-server.html" class="text-emerald-400 hover:text-emerald-300 hover:underline flex items-center gap-2">
+              Read Article <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl overflow-hidden hover:border-emerald-500 hover:-translate-y-1 transition-all duration-300">
+          <div class="p-8">
+            <div class="flex items-center gap-3 text-xs text-emerald-400 mb-4">
+              <span class="uppercase tracking-widest">Linux</span>
+              <span class="text-slate-500">•</span>
+              <span>Dec 2025</span>
+            </div>
+            <h3 class="text-2xl font-medium mb-3">Self-hosted Pi-hole Server</h3>
+            <p class="text-slate-400 mb-6 line-clamp-3">
+              Running Pi-hole on an old Dell laptop with Ubuntu, including custom blocklists and static IP configuration.
+            </p>
+            <a href="pihole-server/pihole-server.html" class="text-emerald-400 hover:text-emerald-300 hover:underline flex items-center gap-2">
+              Read Article <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl overflow-hidden hover:border-emerald-500 hover:-translate-y-1 transition-all duration-300">
+          <div class="p-8">
+            <div class="flex items-center gap-3 text-xs text-emerald-400 mb-4">
+              <span class="uppercase tracking-widest">Development</span>
+              <span class="text-slate-500">•</span>
+              <span>Jan 2026</span>
+            </div>
+            <h3 class="text-2xl font-medium mb-3">SSHGui Application</h3>
+            <p class="text-slate-400 mb-6 line-clamp-3">
+              A Java GUI application for managing and launching SSH connections to local servers, built with AWT and configurable through a config file.
+            </p>
+            <a href="SSHGui/SSHGui.html" class="text-emerald-400 hover:text-emerald-300 hover:underline flex items-center gap-2">
+              Read Article <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl overflow-hidden hover:border-emerald-500 hover:-translate-y-1 transition-all duration-300">
+          <div class="p-8">
+            <div class="flex items-center gap-3 text-xs text-emerald-400 mb-4">
+              <span class="uppercase tracking-widest">Development</span>
+              <span class="text-slate-500">•</span>
+              <span>Jan 2026</span>
+            </div>
+            <h3 class="text-2xl font-medium mb-3">Javapass Application</h3>
+            <p class="text-slate-400 mb-6 line-clamp-3">
+              A Java tool for generating and managing secure passwords through integration with the sops secrets management tool.
+            </p>
+            <a href="javapass/javapass.html" class="text-emerald-400 hover:text-emerald-300 hover:underline flex items-center gap-2">
+              Read Article <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl overflow-hidden hover:border-emerald-500 hover:-translate-y-1 transition-all duration-300">
+          <div class="p-8">
+            <div class="flex items-center gap-3 text-xs text-emerald-400 mb-4">
+              <span class="uppercase tracking-widest">Retro Computing</span>
+              <span class="text-slate-500">•</span>
+              <span>Jan 2026</span>
+            </div>
+            <h3 class="text-2xl font-medium mb-3">Harvard Graphics</h3>
+            <p class="text-slate-400 mb-6 line-clamp-3">
+              Running Harvard Graphics, by setting up MS-DOS and Windows 3.0 inside a virtual machine on a 20-year-old Windows XP laptop.
+            </p>
+            <a href="harvardGraphics/harvardGraphics.html" class="text-emerald-400 hover:text-emerald-300 hover:underline flex items-center gap-2">
+              Read Article <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl overflow-hidden hover:border-emerald-500 hover:-translate-y-1 transition-all duration-300">
+          <div class="p-8">
+            <div class="flex items-center gap-3 text-xs text-emerald-400 mb-4">
+              <span class="uppercase tracking-widest">Networking</span>
+              <span class="text-slate-500">•</span>
+              <span>Apr 2026</span>
+            </div>
+            <h3 class="text-2xl font-medium mb-3">Tailscale</h3>
+            <p class="text-slate-400 mb-6 line-clamp-3">
+              Using Tailscale's mesh VPN for secure remote access to home network services, and SSH connections from any location.
+            </p>
+            <a href="tailscale/tailscale.html" class="text-emerald-400 hover:text-emerald-300 hover:underline flex items-center gap-2">
+              Read Article <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl overflow-hidden hover:border-emerald-500 hover:-translate-y-1 transition-all duration-300">
+          <div class="p-8">
+            <div class="flex items-center gap-3 text-xs text-emerald-400 mb-4">
+              <span class="uppercase tracking-widest">AI / ML</span>
+              <span class="text-slate-500">•</span>
+              <span>Apr 2026</span>
+            </div>
+            <h3 class="text-2xl font-medium mb-3">LM Studio</h3>
+            <p class="text-slate-400 mb-6 line-clamp-3">
+              Running LLM models with LM Studio, using the Gemma 4 model and remote access across devices via LM Link and Tailscale.
+            </p>
+            <a href="lmstudio/lmstudio.html" class="text-emerald-400 hover:text-emerald-300 hover:underline flex items-center gap-2">
+              Read Article <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- Articles / Blog section if needed -->
+  <!-- Footer with contact -->
+  <footer class="py-12 text-center border-t border-slate-800">
+    <p>&copy; Lucas Clarke • Hosted on GitHub Pages</p>
+  </footer>
+
+  <script>
+    // Optional: Tailwind script already included via CDN
+  </script>
+</body>
 
 </html>

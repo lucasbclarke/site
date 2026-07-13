@@ -1,36 +1,64 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
-    <div style="background-color: #0042a4; color: #FFFFFF; margin-top: 0px;">
-    <h1 id=name>Lucas Clarke</h1>
-    <h2 id=occupation>High School Student - Sydney, Australia</h2>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailscale - Lucas Clarke</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    .hero-bg {
+      background: linear-gradient(135deg, #0f172a, #1e2937);
+    }
+  </style>
+</head>
+
+<body class="bg-slate-950 text-slate-200">
+  <nav class="py-4 px-6 flex items-center justify-between border-b border-slate-800">
+    <a href="../index1.html" class="text-xl font-bold hover:text-emerald-400 transition-colors">Lucas Clarke</a>
+    <a href="../index1.html" class="text-sm text-zinc-400 hover:text-white transition-colors"><i class="fas fa-arrow-left mr-2"></i>Back to Home</a>
+  </nav>
+
+  <header class="hero-bg py-16 text-center">
+    <h1 class="text-4xl font-bold mb-4">Tailscale</h1>
+    <div class="flex items-center justify-center gap-3 text-sm text-emerald-400">
+      <span class="uppercase tracking-widest">Networking</span>
+      <span class="text-slate-500">•</span>
+      <span>Apr 2026</span>
     </div>
-  </head>
+  </header>
 
-  <body>
+  <article class="max-w-3xl mx-auto px-6 py-12">
+    <div class="space-y-6 text-lg text-slate-300 leading-relaxed">
+      <p>
+        Tailscale is a free, zero-config mesh VPN service built on the WireGuard protocol. It allows for secure peer-to-peer connection that is accessible to users of various technical
+        abilities. A wide variety of systems are supported including, Windows, Mac, and Linux desktops, Android and iOS phones, and other IoT devices such as raspberry pi's and Network Attached
+        Storage devices.
+      </p>
+      <p>
+        The connection between devices in the "Tailnet" is maintained regardless of physical location, so from your laptop in a coffee shop, you could access your home media server, without
+        the need to configure port forwarding or other firewall options. You can also connect to other devices on your home network, regardless if they are connected to tailscale or not,
+        through a subnet router.
+      </p>
+      <p>
+        For me, I wanted to be able to access my home network storage, and SSH into my home systems, from any location. I am able to achieve both of these goals through tailscale with very
+        little difficulty. The only setup required was the installation of tailscale on my devices, logging into the admin interface using github (this can also be achieved through microsoft,
+        apple and google accounts), and configuring one of my devices (my Dell laptop running Pi-hole) as a subnet router.
+      </p>
+      <p>
+        There are a variety of other features offered by Tailscale which I have yet to use, such as Aperture to manage AI models.
+      </p>
+    </div>
+  </article>
 
-<h2 id="subheading-1">Tailscale</h2>
-
-<h3 id=blog-text><span>Tailscale is a free, zero-config mesh VPN service built on the WireGuard protocal. It allows for secure peer-to-peer connection that is accessible to users of various technical
-abilities. A wide variety of systems are supported including, Windows, Mac, and Linux desktops, Andriod and IOS phones, and other IOT devices such as rasberry pi&rsquo;s and Network Attached
-Storage devices.</h3>
-
-<h3 id=blog-text>The connection between devices in the &ldquo;Tailnet&rdquo; is mainted regardless of physical location, so from your laptop in a coffee shop, you could access your home media server, without
-the need to configure port forwarding or other firewall options. You can also connect to other devices on your home network, regardless if they are connected to tailscale or not,
-through a subnet router.</h3>
-
-<h3 id=blog-text>For me, I wanted to be able to access my home network storage, and SSH into my home systems, from any location. I am able to achieve both of these goals through tailscale with very
-little difficulty. The only setup required was the installation of tailscale on my devices, logging into the admin interface using github (this can also be achived through microsoft,
-apple and google accounts), and configuring one of my devices (my Dell laptop running Pihole) as a subnet router.</h3>
-
-<h3 id=blog-text>There are a variety of other features offered by Tailscale which I have yet to use, such as Aperture to manage AI models.</h3>
-
-<h3 id=blog-text>5.4.26 - 07:16 PM AEST</span></h3>
-
-<a href="../index.html" id=subheading-2>Homepage</a>
-  </body>
+  <footer class="py-12 text-center border-t border-slate-800">
+    <p>&copy; Lucas Clarke • Hosted on GitHub Pages</p>
+  </footer>
+</body>
 
 </html>
