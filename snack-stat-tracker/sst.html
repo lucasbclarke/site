@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snack Stat Tracker - Lucas Clarke</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    .hero-bg {
+      background: linear-gradient(135deg, #0f172a, #1e2937);
+    }
+  </style>
+</head>
+
+
+
+<body class="bg-slate-950 text-slate-200">
+  <nav class="py-4 px-6 flex items-center justify-between border-b border-slate-800">
+    <a href="../index.html" class="text-xl font-bold hover:text-emerald-400 transition-colors">Lucas Clarke</a>
+    <a href="../index.html" class="text-sm text-zinc-400 hover:text-white transition-colors"><i class="fas fa-arrow-left mr-2"></i>Back to Home</a>
+  </nav>
+
+  <header class="hero-bg py-16 text-center">
+    <h1 class="text-4xl font-bold mb-4">Snack Stat Tracker</h1>
+    <div class="flex items-center justify-center gap-3 text-sm text-emerald-400">
+      <span class="uppercase tracking-widest">Development</span>
+      <span class="text-slate-500">•</span>
+      <span>Jul 2026</span>
+    </div>
+  </header>
+
+  <article class="max-w-3xl mx-auto px-6 py-12">
+    <div class="space-y-6 text-lg text-slate-300 leading-relaxed">
+        <p>Snack Stat Tracker is a simple school canteen management system, and was the project that I produced in order to complete my first Year 11 Software Engineering assessment task. It
+        allows customers to select items while enforcing real-time stock limits and calculating order totals on the fly. Through this project I demonstrated my understanding of the software
+        development life cycle, algorithm design, programming structures, and testing and evaluation practices.</p>
+        
+        <h3 id="software-development-life-cycle-sdlc">Software Development Life Cycle (SDLC)</h3>
+        
+        <p>I followed a structured approach for the assessment:</p>
+        
+        <ol>
+        <li><strong>Analysis &amp; Design</strong>: Defined requirements and outlined the GUI layout and flow of data.</li>
+        <li><strong>Implementation</strong>: Started with a terminal prototype, then migrated to the full graphical interface.</li>
+        <li><strong>Testing</strong>: Conducted unit tests for stock validation and integration tests for the full purchase flow. Edge cases included zero stock, negative quantities, and bulk orders.</li>
+        <li><strong>Evaluation</strong>: Documented strengths (fast, reliable) and limitations (no persistent database, basic UI).</li>
+        </ol>
+        
+        <p>The accompanying documentation includes a detailed flowchart showing the interaction between the main menu, order processing, and stock updating logic.</p>
+        
+        <h3 id="key-features">Key Features</h3>
+        
+        <ul>
+        <li><strong>Real-time Stock Management</strong>: The system prevents the user from over purchasing by checking the current stock levels before processing their order.</li>
+        <li><strong>Dynamic Order Total</strong>: Automatically calculates and displays the running total as items are selected.</li>
+        <li><strong>Simple &amp; Intuitive GUI</strong>: Includes buttons for each item, quantity input, and a clear program flow.</li>
+        <li><strong>Personalised Data</strong>: Items, prices, and initial stock levels are easily modified through a custom configuration file.</li>
+        <li><strong>Receipt Generation</strong>: Displays a summary of the purchase upon checkout.</li>
+        </ul>
+        
+        <h3 id="technical-implementation">Technical Implementation</h3>
+        
+        <p>The application is structured around a main window with frames for the item list and order summary.</p>
+        
+        <ul>
+        <li><strong>Data Structure</strong>: A list of dictionaries (obtained from the configuration file) holds each snack&rsquo;s name, price, and current stock level.</li>
+        <li><strong>GUI Components</strong>:
+        
+        <ul>
+        <li>Buttons for item selection.</li>
+        <li>Entry widgets for quantity input.</li>
+        <li>Labels that update dynamically for order totals.</li>
+        </ul></li>
+        <li><strong>Core Logic</strong>: Functions handle adding items to the cart, validating stock, updating totals, and resetting the order.</li>
+        <li><strong>Error Handling</strong>: Detailed messages when stock is insufficient or invalid quantities are entered.</li>
+        </ul>
+        
+        <p>I used Python&rsquo;s Tkinter library as it a commonly used library for basic GUI work and has an intuitive layout system.</p>
+        
+        <div class="mt-10">
+          <img loading="lazy" src="images/sst-main.png" alt="Snack Stat Tracker Main Interface" class="w-full max-w-2xl mx-auto rounded-xl border border-slate-700">
+          <img loading="lazy" src="images/sst-checkout.png" alt="Order Summary" class="w-full max-w-2xl mx-auto rounded-xl border border-slate-700 mt-6">
+        </div>
+        
+        <p class="text-sm text-slate-400 italic text-center"><em>Caption: Main interface showing available items and live order total.</em></p>
+        
+        <h3 id="challenges-encountered">Challenges Encountered</h3>
+        
+        <ul>
+        <li>Managing state across the GUI (updating multiple labels and lists in real-time).</li>
+        <li>Designing an intuitive layout that didn&rsquo;t feel cluttered.</li>
+        <li>Balancing simplicity with functionality within the time constraints of the assessment.</li>
+        </ul>
+        
+        <p>I personally enjoyed the development of this project as it enabled me to develop my python programming ability, and forced me to really consider the relationship between the
+        logic of the program, and the information that was displayed to the user.</p>
+        
+        <h3 id="repository">Repository</h3>
+        
+        <p><a href="https://github.com/lucasbclarke/snack-stat-tracker" target="_blank" class="text-emerald-400 hover:text-emerald-300 hover:underline">View the full project on GitHub</a></p>
+        
+        <p><strong>Technologies</strong>: Python • Tkinter • Basic File I/O</p>
+
+    </div>
+
+  </article>
+
+  <footer class="py-12 text-center border-t border-slate-800">
+    <p>&copy; Lucas Clarke • Hosted on GitHub Pages</p>
+  </footer>
+</body>
+
+</html>
